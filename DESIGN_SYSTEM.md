@@ -5,12 +5,36 @@ Satu sumber kebenaran untuk seluruh UI. **Dilarang hardcode warna, font-family, 
 ## Struktur file
 
 ```
+config/
+├── database.php    ← koneksi PDO MySQL (setara_coffee)
+└── schema.sql      ← tabel menu + transaksi + item_transaksi + data awal
+includes/
+├── helpers.php     ← rupiah(), e(), query, statistik, nomor transaksi
+├── header.php      ← Navbar reusable
+└── footer.php      ← Footer reusable
 css/
 ├── tokens.css      ← SATU sumber kebenaran (semua variabel + @import font)
 ├── base.css        ← reset, tipografi dasar, container, utilitas teks
 ├── components.css  ← Button, Badge, Card, Input/Select/Textarea, Navbar, Section, Footer
 └── pages.css       ← layout spesifik halaman (hero, sidebar, tabel, kartu menu)
+assets/img/         ← ilustrasi SVG lokal
+index.php / app.php / kasir.php / menu.php   ← halaman aplikasi
 ```
+
+File `.html` versi statis tetap disimpan sebagai referensi UI murni.
+Halaman `.php` memakai include header/footer yang sama persis dengan komponen CSS.
+
+## Menjalankan secara lokal
+
+1. Impor `config/schema.sql` ke MySQL (`setara_coffee`).
+2. Sesuaikan kredensial di `config/database.php` (`$dbUser`, `$dbPass`).
+3. Jalankan lewat server PHP: `php -S localhost:8000` lalu buka `http://localhost:8000/index.php`.
+
+Fitur: tambah menu, keranjang kasir (session), bayar & simpan transaksi (transaction + update stok), dashboard statistik hari ini.
+
+## Alur request kasir
+`kasir.php` → POST `tambah` (masuk `$_SESSION['keranjang']`) → POST `bayar` →
+`config/database.php` + helper `buat_nomor_transaksi()` → INSERT transaksi + item (transaction) → stok berkurang → keranjang dikosongkan.
 
 Urutan `<link>` di semua halaman **wajib**: `tokens.css` → `base.css` → `components.css` → `pages.css`.
 
