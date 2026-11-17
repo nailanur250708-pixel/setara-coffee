@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasir — Café Setara</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="navbar__logo" href="index.html">
+        <span class="navbar__logo-mark" aria-hidden="true">CS</span>
+        Café Setara
+      </a>
+      <nav class="navbar__menu" aria-label="Navigasi utama">
+        <a class="navbar__link" href="index.html#fitur">Fitur</a>
+        <a class="navbar__link" href="index.html#alur">Alur kerja</a>
+        <a class="navbar__link" href="menu.html">Menu</a>
+        <a class="navbar__link" href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="navbar__actions">
+        <a class="btn btn--secondary" href="app.html">Aplikasi</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container app-shell">
+    <aside class="sidebar" aria-label="Navigasi aplikasi">
+      <a class="sidebar__link" href="app.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Ringkasan
+      </a>
+      <a class="sidebar__link" href="kasir.html" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v12H4zM8 7V5h8v2M9 12h6"/></svg>
+        Kasir
+      </a>
+      <a class="sidebar__link" href="menu.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        Menu
+      </a>
+    </aside>
+
+    <div>
+      <div class="page-head">
+        <div>
+          <span class="caption text-muted">Transaksi</span>
+          <h1>Kasir</h1>
+        </div>
+        <span class="badge badge--neutral">Meja 01</span>
+      </div>
+
+      <div class="grid cols-1">
+        <article class="card">
+          <h2 class="card__title">Input pesanan</h2>
+          <form class="stack mt-6" action="#" method="post">
+            <div class="field">
+              <label class="field__label" for="produk">Produk</label>
+              <select class="select" id="produk" name="produk" required>
+                <option value="">Pilih menu</option>
+                <option value="kopi-susu">Kopi Susu — Rp 27.000</option>
+                <option value="americano">Americano — Rp 28.000</option>
+                <option value="cappuccino">Cappuccino — Rp 30.000</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="jumlah">Jumlah</label>
+              <input class="input" type="number" id="jumlah" name="jumlah" min="1" value="1" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="catatan">Catatan (opsional)</label>
+              <textarea class="textarea" id="catatan" name="catatan" placeholder="Misalnya: less sugar"></textarea>
+            </div>
+            <div>
+              <button class="btn btn--primary" type="submit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                Tambah ke pesanan
+              </button>
+            </div>
+          </form>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Pesanan saat ini</h2>
+          <div class="table-wrap mt-6">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Produk</th>
+                  <th scope="col">Jumlah</th>
+                  <th scope="col" class="table__num">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Kopi Susu</td>
+                  <td>
+                    <div class="qty">
+                      <button class="qty__btn" type="button" aria-label="Kurangi jumlah">&minus;</button>
+                      <span>2</span>
+                      <button class="qty__btn" type="button" aria-label="Tambah jumlah">+</button>
+                    </div>
+                  </td>
+                  <td class="table__num">Rp 54.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="summary mt-6">
+            <div class="summary__row"><span class="text-muted">Subtotal</span><span>Rp 54.000</span></div>
+            <div class="summary__row"><span class="text-muted">Pajak</span><span>Rp 5.400</span></div>
+            <div class="summary__row summary__row--total"><span>Total</span><span>Rp 59.400</span></div>
+          </div>
+
+          <div class="hero__actions mt-6">
+            <button class="btn btn--primary" type="button">Bayar sekarang</button>
+            <button class="btn btn--ghost" type="button">Kosongkan</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__tagline">Café Setara</p>
+        <p class="footer__text">Satu ruang, untuk setiap hari.</p>
+      </div>
+      <p class="footer__text">&copy; 2026 Café Setara.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

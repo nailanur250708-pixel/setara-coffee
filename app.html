@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi — Café Setara</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="navbar__logo" href="index.html">
+        <span class="navbar__logo-mark" aria-hidden="true">CS</span>
+        Café Setara
+      </a>
+      <nav class="navbar__menu" aria-label="Navigasi utama">
+        <a class="navbar__link" href="index.html#fitur">Fitur</a>
+        <a class="navbar__link" href="index.html#alur">Alur kerja</a>
+        <a class="navbar__link" href="menu.html">Menu</a>
+        <a class="navbar__link" href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="navbar__actions">
+        <a class="btn btn--secondary" href="index.html">Beranda</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Navigasi aplikasi">
+      <a class="sidebar__link" href="app.html" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Ringkasan
+      </a>
+      <a class="sidebar__link" href="kasir.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v12H4zM8 7V5h8v2M9 12h6"/></svg>
+        Kasir
+      </a>
+      <a class="sidebar__link" href="menu.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        Menu
+      </a>
+    </aside>
+
+    <div>
+      <div class="page-head">
+        <div>
+          <span class="caption text-muted">Hari ini</span>
+          <h1>Ringkasan kafe</h1>
+        </div>
+        <a class="btn btn--primary" href="kasir.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          Transaksi baru
+        </a>
+      </div>
+
+      <div class="grid grid--4">
+        <article class="card">
+          <p class="caption text-muted">Penjualan</p>
+          <p class="stat-value">Rp 1.240.000</p>
+          <span class="badge badge--success">+12% dari kemarin</span>
+        </article>
+        <article class="card">
+          <p class="caption text-muted">Transaksi</p>
+          <p class="stat-value">48</p>
+          <p class="card__text">pesanan hari ini</p>
+        </article>
+        <article class="card">
+          <p class="caption text-muted">Menu terlaris</p>
+          <p class="stat-value">Kopi Susu</p>
+          <p class="card__text">18 gelas terjual</p>
+        </article>
+        <article class="card">
+          <p class="caption text-muted">Stok menipis</p>
+          <p class="stat-value">3 item</p>
+          <span class="badge badge--accent">Perlu diperbarui</span>
+        </article>
+      </div>
+
+      <div class="section__head mt-12 mb-6">
+        <h2>Aktivitas terbaru</h2>
+        <p class="section__subtitle">Transaksi yang baru saja dicatat tim.</p>
+      </div>
+
+      <article class="card">
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Waktu</th>
+                <th scope="col">Produk</th>
+                <th scope="col" class="table__num">Jumlah</th>
+                <th scope="col" class="table__num">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>09.24</td><td>Kopi Susu</td><td class="table__num">2</td><td class="table__num">Rp 54.000</td></tr>
+              <tr><td>09.31</td><td>Americano</td><td class="table__num">1</td><td class="table__num">Rp 28.000</td></tr>
+              <tr><td>09.45</td><td>Cappuccino</td><td class="table__num">3</td><td class="table__num">Rp 90.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__tagline">Café Setara</p>
+        <p class="footer__text">Satu ruang, untuk setiap hari.</p>
+      </div>
+      <p class="footer__text">&copy; 2026 Café Setara.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

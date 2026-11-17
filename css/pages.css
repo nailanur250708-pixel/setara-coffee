@@ -1,0 +1,303 @@
+/* ==========================================================================
+   HALAMAN — layout spesifik. Tetap HANYA memakai token & komponen.
+   ========================================================================== */
+
+/* ---------- Ikon dalam kartu fitur ---------- */
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-muted);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.75;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-block: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .hero { padding-block: var(--space-24); }
+}
+
+.hero__inner {
+  display: grid;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.hero__badge { margin-bottom: var(--space-6); }
+
+.hero__title { margin-bottom: var(--space-6); }
+
+.hero__subtitle {
+  font-size: var(--fs-body);
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin-bottom: var(--space-8);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero__media img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .hero__inner { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Langkah / alur kerja ---------- */
+.step {
+  position: relative;
+  padding-left: var(--space-12);
+}
+
+.step__number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+}
+
+/* ---------- Strip CTA (footer band) ---------- */
+.cta-band {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-12);
+  text-align: center;
+}
+
+.cta-band__title {
+  color: var(--color-primary-contrast);
+  margin-bottom: var(--space-4);
+}
+
+.cta-band__text {
+  color: var(--color-surface-muted);
+  margin-bottom: var(--space-8);
+}
+
+.cta-band .btn--secondary {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+}
+
+/* ---------- Dashboard aplikasi ---------- */
+.app-shell {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .app-shell {
+    grid-template-columns: 240px minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.sidebar__link svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.75;
+}
+
+.sidebar__link:hover {
+  background-color: var(--color-surface-muted);
+  color: var(--color-primary);
+}
+
+.sidebar__link[aria-current='page'] {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  color: var(--color-primary);
+  line-height: var(--lh-tight);
+}
+
+/* ---------- Tabel (kasir / menu) ---------- */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-small);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-caption);
+  color: var(--color-text-muted);
+  font-weight: var(--fw-semibold);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table__num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Kartu menu ---------- */
+.menu-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.menu-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.menu-card__body {
+  padding: var(--space-6);
+}
+
+.menu-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.menu-card__price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.menu-card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+/* ---------- Ringkasan / struk ---------- */
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.summary__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-size: var(--fs-small);
+}
+
+.summary__row--total {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+}
+
+.qty {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.qty__btn {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.qty__btn:hover {
+  border-color: var(--color-primary);
+}
+
+.qty__btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* ---------- Jarak antar blok (menggantikan inline style) ---------- */
+.mt-12 { margin-top: var(--space-12); }
+.mt-6 { margin-top: var(--space-6); }
+.mb-6 { margin-bottom: var(--space-6); }
+.cols-1 { grid-template-columns: minmax(0, 1fr); }

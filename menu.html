@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Café Setara</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="navbar__logo" href="index.html">
+        <span class="navbar__logo-mark" aria-hidden="true">CS</span>
+        Café Setara
+      </a>
+      <nav class="navbar__menu" aria-label="Navigasi utama">
+        <a class="navbar__link" href="index.html#fitur">Fitur</a>
+        <a class="navbar__link" href="index.html#alur">Alur kerja</a>
+        <a class="navbar__link" href="menu.html" aria-current="page">Menu</a>
+        <a class="navbar__link" href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="navbar__actions">
+        <a class="btn btn--secondary" href="app.html">Aplikasi</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container app-shell">
+    <aside class="sidebar" aria-label="Navigasi aplikasi">
+      <a class="sidebar__link" href="app.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Ringkasan
+      </a>
+      <a class="sidebar__link" href="kasir.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v12H4zM8 7V5h8v2M9 12h6"/></svg>
+        Kasir
+      </a>
+      <a class="sidebar__link" href="menu.html" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        Menu
+      </a>
+    </aside>
+
+    <div>
+      <div class="page-head">
+        <div>
+          <span class="caption text-muted">Daftar minuman</span>
+          <h1>Menu kafe</h1>
+        </div>
+        <button class="btn btn--primary" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          Tambah menu
+        </button>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card menu-card">
+          <img class="menu-card__img" src="assets/img/menu-kopi-susu.svg" alt="Kopi Susu">
+          <div class="menu-card__body">
+            <div class="menu-card__head">
+              <h3 class="card__title">Kopi Susu</h3>
+              <span class="menu-card__price">Rp 27.000</span>
+            </div>
+            <p class="card__text">Espresso dengan susu creamy, favorit sejak hari pertama.</p>
+            <div class="menu-card__foot">
+              <span class="badge badge--success">Tersedia</span>
+              <button class="btn btn--secondary btn--sm" type="button">Pilih</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card menu-card">
+          <img class="menu-card__img" src="assets/img/menu-americano.svg" alt="Americano">
+          <div class="menu-card__body">
+            <div class="menu-card__head">
+              <h3 class="card__title">Americano</h3>
+              <span class="menu-card__price">Rp 28.000</span>
+            </div>
+            <p class="card__text">Espresso dipanjangkan dengan air panas, ringan dan bersih.</p>
+            <div class="menu-card__foot">
+              <span class="badge badge--success">Tersedia</span>
+              <button class="btn btn--secondary btn--sm" type="button">Pilih</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card menu-card">
+          <img class="menu-card__img" src="assets/img/menu-cappuccino.svg" alt="Cappuccino">
+          <div class="menu-card__body">
+            <div class="menu-card__head">
+              <h3 class="card__title">Cappuccino</h3>
+              <span class="menu-card__price">Rp 30.000</span>
+            </div>
+            <p class="card__text">Perpaduan espresso, susu, dan busa lembut di atasnya.</p>
+            <div class="menu-card__foot">
+              <span class="badge badge--neutral">Stok terbatas</span>
+              <button class="btn btn--secondary btn--sm" type="button">Pilih</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__tagline">Café Setara</p>
+        <p class="footer__text">Satu ruang, untuk setiap hari.</p>
+      </div>
+      <p class="footer__text">&copy; 2026 Café Setara.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

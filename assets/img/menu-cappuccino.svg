@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Cappuccino">
+  <rect width="400" height="300" fill="#F1E9DD"/>
+  <ellipse cx="200" cy="250" rx="120" ry="18" fill="#6B3F22" opacity=".2"/>
+  <path d="M125 110h150v100a75 75 0 0 1-150 0z" fill="#FFFFFF" stroke="#E6DCCD" stroke-width="4"/>
+  <path d="M275 130h20a45 45 0 0 1 0 90h-20" fill="none" stroke="#FFFFFF" stroke-width="14"/>
+  <path d="M135 140h130v60a65 65 0 0 1-130 0z" fill="#6B3F22" opacity=".75"/>
+  <ellipse cx="200" cy="140" rx="65" ry="14" fill="#FBF6EE"/>
+  <path d="M175 100c-12-18 12-28 0-46M215 100c-12-18 12-28 0-46" fill="none" stroke="#7A6A5E" stroke-width="5" stroke-linecap="round" opacity=".5"/>
+</svg>

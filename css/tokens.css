@@ -1,0 +1,85 @@
+/* ==========================================================================
+   DESIGN TOKENS — Café Setara
+   SATU sumber kebenaran. Dilarang hardcode warna/font/spacing/radius di file lain.
+   Semua nilai di sini; komponen & halaman hanya memakai var(--...).
+   ========================================================================== */
+
+/* Font dimuat SATU kali di sini (Asset: Google Fonts).
+   Fallback: system-ui (body) / Georgia (heading). */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------- Warna ---------- */
+  --color-bg: #FBF6EE;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F1E9DD;
+
+  --color-primary: #6B3F22;
+  --color-primary-hover: #55321B;
+  --color-primary-contrast: #FFFFFF;
+
+  --color-text: #3B2A20;
+  --color-text-muted: #7A6A5E;
+  --color-border: #E6DCCD;
+
+  --color-accent: #C97B84;
+
+  --color-success-bg: #DDEFD9;
+  --color-success-text: #2F6B3A;
+  --color-danger: #B3402F;
+  --color-warning: #C98A1B;
+
+  /* ---------- Tipografi ---------- */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --fs-h1: clamp(2.5rem, 5vw, 3.75rem);
+  --fs-h2: 2rem;
+  --fs-h3: 1.5rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-caption: 0.75rem;
+
+  --lh-tight: 1.1;
+  --lh-body: 1.6;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  --ls-caption: 0.06em;
+
+  /* ---------- Spacing (kelipatan 4px) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadow lembut ---------- */
+  --shadow-sm: 0 1px 2px rgba(59, 42, 32, 0.06);
+  --shadow-md: 0 8px 24px rgba(59, 42, 32, 0.08);
+
+  /* ---------- Layout ---------- */
+  --container-max: 1200px;
+  --container-pad: 24px;
+  --container-pad-mobile: 16px;
+
+  --navbar-height: 64px;
+
+  /* ---------- Focus ring ---------- */
+  --focus-ring: 0 0 0 2px var(--color-surface), 0 0 0 4px var(--color-accent);
+
+  /* ---------- Breakpoint (dipakai via @media di file lain) ----------
+     640 / 768 / 1024 / 1280  */
+}
